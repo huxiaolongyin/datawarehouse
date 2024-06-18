@@ -30,11 +30,11 @@
       <!--NameNode RPC通讯地址-->
       <property>
         <name>dfs.namenode.rpc-address.htwcluster.nn1</name>
-        <value>hdp01:8020</value>
+        <value>hdp01:9820</value>
       </property>
       <property>
         <name>dfs.namenode.rpc-address.htwcluster.nn2</name>
-        <value>hdp02:8020</value>
+        <value>hdp02:9820</value>
       </property>
       <!--NameNode http通讯地址-->
       <property>
