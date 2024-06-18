@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+      <!--集群名称-->
+      <property>
+        <name>dfs.nameservices</name>
+        <value>htwcluster</value>
+      </property>
+      <!--集群中NameNode节点-->
+      <property>
+        <name>dfs.ha.namenodes.htwcluster</name>
+        <value>nn1,nn2</value>
+      </property>
+      <!--NameNode RPC通讯地址-->
+      <property>
+        <name>dfs.namenode.rpc-address.htwcluster.nn1</name>
+        <value>hdp01:9820</value>
+      </property>
+      <property>
+        <name>dfs.namenode.rpc-address.htwcluster.nn2</name>
+        <value>hdp02:9820</value>
+      </property>
+      <!--NameNode http通讯地址-->
+      <property>
+        <name>dfs.namenode.http-address.htwcluster.nn1</name>
+        <value>hdp01:9870</value>
+      </property>
+      <property>
+        <name>dfs.namenode.http-address.htwcluster.nn2</name>
+        <value>hdp02:9870</value>
+      </property>
+      <!--NameNode元数据在JournalNode上存放的位置-->
+      <property>
+        <name>dfs.namenode.shared.edits.dir</name>
+        <value>qjournal://hdp04:8485;hdp05:8485;hdp06:8485;hdp07:8485;hdp08:8485/htw_cluster</value>
+      </property>
+      <!--JournalNode数据存放目录-->
+      <property>
+        <name>dfs.journalnode.edits.dir</name>
+        <value>/home/software/hadoop/hadoop-3.3.5/data/journal/data</value>
+      </property>
+      <!--启用nn故障自动转移-->
+      <property>
+        <name>dfs.ha.automatic-failover.enabled</name>
+        <value>true</value>
+      </property>
+      <!--访问代理类：client用于确定哪个NameNode为Active-->
+      <property>
+        <name>dfs.client.failover.proxy.provider.htwcluster</name>
+        <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+      </property>
+      <!--配置隔离机制，即同一时刻只能有一台服务器对外响应-->
+      <property>
+        <name>dfs.ha.fencing.methods</name>
+        <value>sshfence</value>
+      </property>
+      <!--使用隔离机制时需要ssh秘钥登录-->
+      <property>
+        <name>dfs.ha.fencing.ssh.private-key-files</name>
+        <value>/root/.ssh/id_rsa</value>
+      </property>
+      <!--隔离的超时时间-->
+      <property>
+        <name>dfs.ha.fencing.ssh.connect-timeout</name>
+        <value>30000</value>
+      </property>
+      <!-- 默认fimg位置 -->
+      <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///home/software/hadoop/fsimg</value>
+      </property>
+</configuration>
