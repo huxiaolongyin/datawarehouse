@@ -90,4 +90,10 @@
         <name>dfs.permissions</name>
         <value>false</value>
       </property>
+      <!-- datanode结点被指定要存储数据的本地文件系统路径 -->
+      <property>
+      	<name>dfs.datanode.data.dir</name>
+      	<value>file:///home/software/hadoop/data</value>
+      </property>
+
 </configuration>
