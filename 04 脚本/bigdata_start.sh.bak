@@ -2,8 +2,7 @@
 master_host='hdp01'
 user='root'
 hosts='hdp01 hdp02 hdp03 hdp04 hdp05 hdp06 hdp07 hdp08'
-
-LOG_DIR='/root/datawarehouse/logs'
+LOG_DIR='/root/scripts/logs'
 export SOFTWARE_HOME=/home/software
 JAVA_HOME=/usr/jdk1.8.0_161
 export JRE_HOME=/opt/app/jdk1.8.0_161/jre
@@ -97,31 +96,6 @@ function stop_hive()
 
 }
 
-function start_jupyter()
-{
-    echo "================     正在启动jupyter-lab             ==========="
-    nohup jupyter-lab --allow-root >$LOG_DIR/jupyterlab.log 2>&1 &
-}
-
-function stop_jupyter()
-{   
-    echo "================     正在关闭jupyter-lab             ==========="
-    jupyterpid=$(check_process jupyter 9821)
-    [ "$jupyterpid" ] && kill $jupyterpid || echo "jupyter服务未启动"
-}
-
-function start_dolphinschedual()
-{
-    echo "================     正在启动dolphinschedual          ==========="
-    bash $SOFTWARE_HOME/dolphinscheduler/apache-dolphinscheduler-3.2.1-bin/bin/start-all.sh
-}
-
-function stop_dolphinschedual()
-{
-    echo "================     正在关闭dolphinschedual          ==========="
-    bash $SOFTWARE_HOME/dolphinscheduler/apache-dolphinscheduler-3.2.1-bin/bin/stop-all.sh
-}
-
 case $1 in
 "start-hive")
     start_hive
@@ -135,20 +109,12 @@ case $1 in
 "start-hadoop")
     start_hadoop
     ;;
-"start-jupyter")
-    start_jupyter
-    ;;
-"start-dolphinschedual")
-    start_dolphinschedual
-    ;;
 "start-all")
     echo "================     开始启动所有节点服务            ==========="
     start_zookeeper
     start_hadoop
     start_spark
     start_hive
-    start_jupyter
-    start_dolphinschedual
     ;;
 "stop-hive")
     stop_hive
@@ -162,23 +128,15 @@ case $1 in
 "stop-hadoop")
     stop_hadoop
     ;;
-"stop-jupyter")
-    stop_jupyter
-    ;;
-"stop-dolphinschedual")
-    stop_dolphinschedual
-    ;;
 "stop-all")
     echo "================     开始关闭所有节点服务            ==========="
     stop_spark
     stop_hive
     stop_hadoop
     stop_zookeeper
-    stop_jupyter
-    stop_dolphinschedual
     ;;
 *)
     echo '参数错误！'
-    echo 'Usage: '$(basename $0)' start-|stop-(hive|spark|zookeeper|hadoop|jupyter|all)'
+    echo 'Usage: '$(basename $0)' start-|stop-(hive|spark|zookeeper|hadoop|all)'
     ;;
 esac
