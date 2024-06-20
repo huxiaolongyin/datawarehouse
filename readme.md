@@ -10,7 +10,7 @@
 
 整体架构图如下：
 
-![本地路径](/01%20安装部署/static/架构.png "相对路径演示")
+![本地路径](/static/架构.png "架构图")
 - **存储**：HA HDFS + Hive
 - **计算**：Spark
 - **调度**：Dolphinschedual
