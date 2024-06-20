@@ -181,3 +181,18 @@ java.io.IOException: Failed to delete: /tmp/blockmgr-01ada0e4-54ce-4b23-aacb-f4e
 [I 2024-06-20 15:18:20.394 ServerApp] Connecting to kernel 166d6cb5-48c1-41f7-ac46-027b4a903050.
 [I 2024-06-20 15:18:20.408 ServerApp] Connecting to kernel 166d6cb5-48c1-41f7-ac46-027b4a903050.
 [I 2024-06-20 15:28:50.118 ServerApp] Starting buffering for 166d6cb5-48c1-41f7-ac46-027b4a903050:8da256de-ad80-45f9-b2a3-41a002172b59
+[I 2024-06-20 17:30:36.610 ServerApp] 302 GET / (@192.168.9.165) 0.49ms
+[W 2024-06-20 17:30:37.230 ServerApp] 404 GET /lsp/status?1718875837351 (049e0cafe4384211a69c8c08fb757791@192.168.9.165) 1.36ms referer=http://192.168.30.100:9821/lab?
+[I 2024-06-20 17:30:37.264 ServerApp] Connecting to kernel 166d6cb5-48c1-41f7-ac46-027b4a903050.
+[I 2024-06-20 17:30:37.289 ServerApp] Starting buffering for 166d6cb5-48c1-41f7-ac46-027b4a903050:e42c3e52-02e1-4f1b-b524-ef70c7f51ea1
+[W 2024-06-20 17:30:37.350 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2024-06-20 17:30:37.850 ServerApp] Connecting to kernel 166d6cb5-48c1-41f7-ac46-027b4a903050.
+[I 2024-06-20 17:30:40.959 ServerApp] Saving file at /03 代码/02 tts_log/dwd_tts_log.ipynb
+[I 2024-06-20 17:30:42.559 ServerApp] Starting buffering for 166d6cb5-48c1-41f7-ac46-027b4a903050:651dfd40-7dfd-4627-986c-1c05fa291fa0
+[I 2024-06-20 17:30:47.428 ServerApp] Kernel shutdown: 166d6cb5-48c1-41f7-ac46-027b4a903050
+[I 2024-06-20 17:31:10.841 ServerApp] Uploading file to /03 代码/01 aiui_log/rsync_script.sh
+[I 2024-06-20 17:32:26.920 ServerApp] Creating new file in /03 代码/01 aiui_log
+[W 2024-06-20 17:32:33.719 ServerApp] delete /03 代码/01 aiui_log/untitled.txt
+[I 2024-06-20 17:32:48.234 ServerApp] Kernel started: bd871946-8515-4b99-88df-789e028231fd
+[I 2024-06-20 17:32:48.713 ServerApp] Connecting to kernel bd871946-8515-4b99-88df-789e028231fd.
+[I 2024-06-20 17:32:54.757 ServerApp] Starting buffering for bd871946-8515-4b99-88df-789e028231fd:45e39eb4-cfda-4891-82b7-c633c03fe83b
