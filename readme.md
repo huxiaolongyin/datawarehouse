@@ -21,12 +21,22 @@
 
 # 各个平台地址
 
-HDFS: 192.168.30.100:9870
+**HDFS**: http://192.168.30.100:9870
 
-SPARK MASTER: 192.168.30.100:7070
+**SPARK**: http://192.168.30.100:7070
 
-Hive：
+**Dolphinshedual**：http://192.168.30.100:12345/dolphinscheduler/ui
+- 管理员账号：admin   
+- 管理员密码：12345@HTW
 
-Dolphinshedual：192.168.30.100:12345/dolphinscheduler/ui
+**FileBrowser**： http://192.168.30.149:8068
+- 管理员账号：admin   
+- 管理员密码：12345@HTW
 
-FileBrowser： 192.168.30.149:8068
+**Superset**: http://192.168.30.149:8066
+- 管理员账号：admin   
+- 管理员密码：admin
+
+**Openmetadata**：http://192.168.30.100:8585
+- 管理员账号：admin   
+- 管理员密码：htw12345@HTW
