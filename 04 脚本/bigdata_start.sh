@@ -179,6 +179,6 @@ case $1 in
     ;;
 *)
     echo '参数错误！'
-    echo 'Usage: '$(basename $0)' start-|stop-(hive|spark|zookeeper|hadoop|jupyter|all)'
+    echo 'Usage: '$(basename $0)' start-|stop-(hive|spark|zookeeper|hadoop|jupyter|dolphinschedual|all)'
     ;;
 esac

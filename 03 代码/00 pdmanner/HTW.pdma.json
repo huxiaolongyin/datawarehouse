@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.2",
   "createdTime": "2024-5-31 16:50:57",
-  "updatedTime": "2024-6-19 18:16:55",
+  "updatedTime": "2024-6-20 13:56:11",
   "dbConns": [],
   "profile": {
     "default": {
@@ -1265,7 +1265,7 @@
       ],
       "fields": [
         {
-          "defKey": "log_value",
+          "defKey": "value",
           "defName": "日志原始值",
           "comment": "",
           "type": "TEXT",
@@ -1451,7 +1451,7 @@
           "defKey": "create_time",
           "defName": "创建时间",
           "comment": "",
-          "type": "DATETIME",
+          "type": "",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -1460,9 +1460,9 @@
           "defaultValue": "",
           "hideInGraph": false,
           "refDict": null,
-          "baseType": "89D69E81-EA34-42EE-9FA2-93B8BD27E098",
+          "baseType": "FC9790A7-36B8-4A48-8F9A-BC1042BCFE64",
           "extProps": {},
-          "domain": null,
+          "domain": "9092C4E0-1A54-4859-ABBB-5B62DBC27573",
           "id": "EADA7B53-AB19-4290-81C3-A006B6A5441B",
           "uiHint": null
         }
