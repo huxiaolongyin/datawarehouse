@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.9.2",
   "createdTime": "2024-5-31 16:50:57",
-  "updatedTime": "2024-6-18 14:57:19",
+  "updatedTime": "2024-6-19 18:16:55",
   "dbConns": [],
   "profile": {
     "default": {
@@ -2091,6 +2091,42 @@
           "attr9": "",
           "id": "E175ABF9-D11B-4938-A725-CAE6458222D5",
           "baseType": "FC9790A7-36B8-4A48-8F9A-BC1042BCFE64"
+        },
+        {
+          "defKey": "operation",
+          "defName": "操作类型",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "FC9790A7-36B8-4A48-8F9A-BC1042BCFE64",
+          "extProps": {},
+          "domain": "9092C4E0-1A54-4859-ABBB-5B62DBC27573",
+          "id": "4F52E006-A006-40AD-ABA7-E5E8BD3C8262"
+        },
+        {
+          "defKey": "mark",
+          "defName": "是否汉特云命中",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "baseType": "FC9790A7-36B8-4A48-8F9A-BC1042BCFE64",
+          "extProps": {},
+          "domain": "9092C4E0-1A54-4859-ABBB-5B62DBC27573",
+          "id": "5AE66D0C-FA1C-4F6F-BDF9-945A4F5905F6"
         }
       ],
       "correlations": [],
@@ -2100,7 +2136,19 @@
   ],
   "views": [],
   "dicts": [],
-  "viewGroups": [],
+  "viewGroups": [
+    {
+      "defKey": "aiui_log",
+      "defName": "ai服务日志",
+      "refEntities": [
+        "28DA6944-440C-4A69-A260-3D8AD757FBD7"
+      ],
+      "refViews": [],
+      "refDiagrams": [],
+      "refDicts": [],
+      "id": "44432A56-E342-43A2-9CF3-51E4F389E493"
+    }
+  ],
   "dataTypeMapping": {
     "referURL": "",
     "mappings": [
