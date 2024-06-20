@@ -9,7 +9,7 @@
     主要采用离线 Lambda 架构的方式，这是由Storm的作者Nathan Marz提出，使用流处理技术直接完成那些实时性要求较高的指标计算，然后和离线计算进整合从而给用户 一个完整的实时计算结果
 
 整体架构图如下：
-<img src="./static/数仓架构.png" width="800px" />
+<img src="/static/数仓架构.png" width="800px" />
 - **存储**：HA HDFS + Hive
 - **计算**：Spark
 - **调度**：Dolphinschedual
