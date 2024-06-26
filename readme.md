@@ -25,6 +25,8 @@
 
 **Yarn**:http://192.168.30.100:8088/cluster
 
+**HistoryJob**:http://192.168.30.100:19888
+
 **SPARK**: http://192.168.30.100:7070
 
 **Dolphinshedual**：http://192.168.30.100:12345/dolphinscheduler/ui
@@ -45,5 +47,3 @@
 
 **Jupyter-lab**:http://192.168.30.100:9821
 - 密码：123456
-
-**Dolphinschedual**:http://192.168.30.100:12345/dolphinscheduler/ui

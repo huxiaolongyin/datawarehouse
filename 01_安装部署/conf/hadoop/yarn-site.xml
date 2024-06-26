@@ -35,13 +35,37 @@
         <name>yarn.nodemanager.vmem-check-enabled</name>
         <value>false</value>
     </property>
-        
+    
+    <!-- yarn分配最大内存 -->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>8196</value>
+    </property>
+    
+    <!-- yarn分配最大核心 -->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-vcores</name>
+        <value>32</value>
+    </property>
+
+
     <!-- 开启日志聚集 -->
     <property>
         <name>yarn.log-aggregation-enable</name>
         <value>true</value>
     </property>
-        
+    
+    <!-- 设置日志存放HDFS位置 -->
+    <property>
+        <name>yarn.nodemanager.remote-app-log-dir</name>
+        <value>/logs/yarn</value>
+    </property>    
+    
+     <!-- 设置日志存放后缀 -->
+    <property>
+        <name>yarn.nodemanager.remote-app-log-dir-suffix</name>
+        <value>log</value>
+    </property>	
     <!-- 设置yarn历史服务器地址 -->
     <property>
         <name>yarn.log.server.url</name>
