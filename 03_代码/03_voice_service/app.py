@@ -1,3 +1,4 @@
+#coding=UTF-8
 from flask import Flask, request, jsonify
 import edge_tts
 import base64
@@ -30,15 +31,16 @@ def text_to_speech():
 
 # 提问，通过大模型，返回内容
 def question(question_text) -> None:
-    response = ollama.chat(model='qwen2:0.5b', messages=[
+    response = ollama.chat(model='llama3', messages=[
+    {
+        'role': 'system',
+        'content': "你的名字是笨笨同学, 你是一个乐于助人、尊重和诚实的助手。请使用中文进行回答，请简要的用一句话回答问题，回答的字数不超过100字，请不要使用除了逗号和句号以外的任何字符，始终尽可能有帮助地回答。如果一个问题没有任何意义，或者与事实不符，请解释为什么，而不是回答不正确的问题。如果您不知道问题的答案，请不要分享虚假信息。"
+    },
     {
         'role': 'user',
         'content': "{}".format(question_text),
     },
-    {
-        'role': 'system',
-        'content': "你是人工智能助手笨笨同学"
-    },
+    
     ])
     return response['message']['content']
 
